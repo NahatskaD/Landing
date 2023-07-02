@@ -1,0 +1,393 @@
+
+body,
+header,
+div,
+p{
+    margin: 0;
+}
+
+@font-face {
+	font-family: "Muller";
+	font-display: swap; 
+	src: 
+       url("./fonts/MullerRegular.woff") format ("woff"),
+       url("./fonts/MullerRegular.woff2") format ("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Muller";
+	font-display: swap; 
+	src: 
+       url("./fonts/MullerBold.woff") format ("woff"),
+       url("./fonts/MullerBold.woff2") format ("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+.nav__link, .text, .text3, .btn1, .btn2, .block__text1, .block__text2, .block__text3, .description, .card__description, .about-text, .cont-text, .about-nav, .ph, .inst, .email, .copyright, .hours{
+    font-family: 'Muller', sans-serif;
+    font-weight: 400;
+}
+
+.block__number1, .block__number2, .block__number3, .title-number, .title-heading, .cont-title{
+    font-family: 'Muller', sans-serif;
+    font-weight: 700;
+}
+
+.container{
+    padding: 60px 0 0 0;
+    margin: 0 auto;
+    width: 1150px;
+}
+
+.first__screen{
+    background-image: url(./image/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100vw;
+    padding: 20px 40px 0 40px;
+}
+
+.header{
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header__nav{
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    grid-template-columns: 50px 50px 50px;
+    gap: 40px;
+}
+.nav{
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: black;
+    padding: 0 0 0 0;
+}
+
+.header__logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    margin-right: 10px;
+}
+
+.text{
+    white-space: pre-line;
+    color: #46b1de;
+    font-family: 'Russo One', sans-serif;
+}
+
+.header__phone{
+    display: flex;
+    align-items: center;
+}
+
+.phone{
+    padding-left: 10px;
+}
+
+.text1{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 32px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.text2{
+    text-transform: uppercase;
+    color: #46b1de;
+   font-weight: bold;
+   font-size: 32px;
+   font-family: 'Russo One', sans-serif;
+}
+.text3{
+    font-weight: bold;
+}
+
+.main__btn{
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.btn1{
+    border: solid 1px;
+    background-color: #46b1de;
+    color: white;
+    border-color: black;
+    margin-right: 80px;
+    padding: 10px 27px 10px 27px;
+}
+
+.btn2{
+    border: solid 1px;
+    border-color: black; 
+    color: #46b1de;
+    background-color: white;
+}
+
+.main__block{
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  overflow: auto;
+  margin-top: 90px;
+  z-index: 1;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 242px 242px 242px;
+  gap: 60px;
+}
+
+.block{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* margin: 20px; */
+    /* display: inline-block; */
+    width: 220px;
+    height: 80px;
+    background-color: white;
+    border: solid 1px;
+    border-color: black;
+    border-radius: 8px;
+    box-shadow: #46b1de;
+    white-space:normal;
+    overflow: auto;
+    gap: 15px;
+
+}
+
+.block__number1{
+    width: 46px;
+    float: left;
+    height: 46px;
+    font-size: 40px;
+    margin-left: 0;
+    font-weight: bold;
+    color: #46b1de;
+}
+
+.block__number2{
+    width: 80px;
+    float: left;
+    height: 46px;
+    /* padding: 0; */
+    font-size: 40px;
+    margin-left: 0;
+    font-weight: bold;
+    color: #46b1de;
+}
+
+.block__number3{
+    width: 46px;
+    float: left;
+    height: 46px;
+    /* padding: 0; */
+    font-size: 40px;
+    margin-left: 0;
+    font-weight: bold;
+    color: #46b1de;
+}
+
+.block__text1{
+    text-align: left;
+    float: right;
+    height: auto;
+    margin-right: 0;
+    white-space:normal;
+}
+
+.block__text2{
+    text-align: left;
+    float: right;
+    height: auto;
+    margin-right: 0;
+    white-space:normal;
+}
+
+.block__text3{
+    text-align: left;
+    float: right;
+    height: auto;
+    margin-right: 0;
+    white-space:normal;
+}
+
+.main__bg{
+    position: absolute;
+    top: 180px;
+    right: 180px;
+    background-repeat: no-repeat;
+}
+
+
+.second__screen{
+    margin-top: 100px;
+    height: 800px;
+    width: 100vw;
+    padding: 60px 40px 0 40px;
+    /* text-align: center; */
+}
+
+.title{
+    font-size: 26px;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+}
+
+.title__blue{
+    color: #46b1de;
+}
+
+.description{
+    width: 530px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns:repeat(3,  262px);
+    grid-template-rows: repeat(2,  162px);
+    gap: 20px;
+    padding: 40px;
+    background-color: #72c6ea;
+    border-radius: 8px;
+    width: 820px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.title-number, .title-heading{
+    color: #46b1de;
+}
+
+.card1, .card2, .card3, .card4, .card5, .card6{
+    width: 240px;
+    height: 140px;
+    border:solid 1px;
+    background-color: white;
+    border-color:  #c1c1c1;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.card__title{
+    background-color: white;
+    overflow: auto;
+    width: 240px;
+    height: 50px;
+    /* white-space: pre-line; */
+    display: flex;
+    align-items: center;
+}
+
+.title-number{
+    font-size: 38px;
+    padding-right: 10px;
+}
+
+
+
+.footer{
+    height: 400px;
+    width: 100vw;
+    /* border-color: #0F2C4A;
+    border: solid 1px; */
+    background: linear-gradient(to bottom right, #A1C7D4, #067FAA);
+    padding: 60px 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer__about{
+    color: #0F2C4A;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+}
+
+.about-logo{
+    padding-right: 10px;
+}
+
+.about-text{
+    white-space: pre-line;
+}
+
+.dr{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.dentist{
+    font-size: 24px; 
+}
+
+.footer__contacts{
+    color: white;
+    padding-right: 200px;
+    padding-top: 20px;
+}
+
+.cont-title{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.cont-text{
+    padding-top: 0;
+}
+ .footer__phone, .footer__instagram, .footer__mail{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+ }
+
+ .ph, .inst, .email{
+    padding-left: 10px;
+ }
+
+ .footer__messengers{
+    display: flex;
+    align-items: center;
+ }
+
+ .messenger{
+    padding-right: 20px;
+ }
+
+ .copyright{
+    font-size: 12px;
+    position: absolute;
+    bottom: 30px;
+    right: 280px;
+ }
+
+ .hours{
+    position: absolute;
+    bottom: 160px;
+    left: 260px;
+ }
