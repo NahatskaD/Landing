@@ -153,10 +153,26 @@ p{
    display: inline-block;
 }
 
+.nav:hover{
+    color:#46B1DE;
+}
+
+.link2:hover{
+    color:#46B1DE;
+}
+
+.link3:hover{
+    color:#46B1DE;
+}
+
 .nav__link{
     text-decoration: none;
     color: black;
     padding: 0 0 0 0;
+}
+
+.nav__link:hover{
+    color:#46B1DE;
 }
 
 .header__logo{
@@ -259,12 +275,30 @@ p{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    position: relative;
+}
+
+.phone::before {
+    content: "";
+    background-image: url(/img/phone.svg);
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 1px;
+    left: -20px;
+    background-repeat: no-repeat;
 }
 
 @media(max-width: 992px){
     .phone{
         display: none;
     }
+}
+
+.header_lang{
+    display: flex;
+    justify-content: space-between;
+    width: 64px;
 }
 
 .header-lang{
@@ -274,6 +308,26 @@ p{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    position: relative;
+}
+.header-en{
+    position: relative; 
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.header-en::before {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    left: -7px;
+    background-repeat: no-repeat;
 }
 
 @media(max-width: 480px){
@@ -1557,14 +1611,17 @@ p{
     flex-shrink: 0;
     border-radius: 8px;
     background: rgba(217, 217, 217, 0.71);
-    color: rgba(27, 29, 31, 0.51);
+    border: 1px solid #909090;
+    color: rgba(217, 217, 217, 0.71);
     text-align: center;
     font-family: Roboto;
     font-size: 19px;
     font-style: normal;
     font-weight: 600;
+    box-shadow:none
     line-height: 140%; /* 26.6px */
   }
+
 
   @media(max-width: 992px){
     .input-bg{
@@ -1573,7 +1630,8 @@ p{
         flex-shrink: 0;
         border-radius: 8px;
         background: rgba(217, 217, 217, 0.71);
-        color: rgba(27, 29, 31, 0.51);
+        border: 1px solid #909090;
+        color: rgba(217, 217, 217, 0.71);
         text-align: center;
         font-family: Roboto;
         font-size: 19px;
@@ -1590,7 +1648,8 @@ p{
         flex-shrink: 0;
         border-radius: 8px;
         background: rgba(217, 217, 217, 0.71);
-        color: rgba(27, 29, 31, 0.51);
+        border: 1px solid #909090;
+        color: rgba(217, 217, 217, 0.71);
         text-align: center;
         font-family: Roboto;
         font-size: 19px;
@@ -1607,7 +1666,8 @@ p{
         flex-shrink: 0;
         border-radius: 8px;
         background: rgba(217, 217, 217, 0.71);
-        color: rgba(27, 29, 31, 0.51);
+        color: rgba(217, 217, 217, 0.71);
+        border: 1px solid #909090;
         text-align: center;
         font-family: Roboto;
         font-size: 19px;
@@ -1617,6 +1677,10 @@ p{
       }
 }
 
+
+.input-bg:focus{
+    border: 2px solid #46B1DE;
+}
 
   .name-input input {
     padding-left: 20px;
@@ -1639,14 +1703,6 @@ p{
     background-repeat: no-repeat;
   }
 
-  .input-bg{
-    width: 213px;
-    height: 57px;
-    flex-shrink: 0;
-    border: 0px;
-    border-radius: 8px;
-    background: rgba(217, 217, 217, 0.71);
-  }
   
   .phone-input input {
     padding-left: 20px;
@@ -1686,7 +1742,7 @@ p{
   @media(max-width: 480px){
     .sign-up{
         display: flex;
-        width: 235px;
+        width: 310px;
         height: 57px;
         padding: 16px 35px 16px 35px;
         justify-content: center;
@@ -1818,6 +1874,64 @@ p{
     line-height: 135%; /* 27px */
 }
 
+.about-nav-ua{
+    position: relative;
+    color: #0F2D4A;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%; /* 27px */
+}
+
+.about-nav-en{
+    position: relative;
+    color: #0F2D4A;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 27px */
+}
+
+.about-nav-ua::after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    top: 2px;
+    left: 30px;
+    background-repeat: no-repeat;
+}
+
+.about-nav-ua:focus{
+   color: #7fffd4;
+}
+   
+.about-nav-en:focus{
+    color: #7fffd4;
+}
+
+.about-nav:hover{
+    color: #ffffff;
+}
+
+.about-nav-ua:hover{
+    color: #ffffff;
+ }
+    
+ .about-nav-en:hover{
+     color: #ffffff;
+ }
+
+.footer-leng{
+    display: flex;
+    width: 64px;
+    text-align: center;
+}
+
+
 .dr{
     color: #0F2D4A;
     font-family: Sofia Sans;
@@ -1893,18 +2007,102 @@ p{
     align-items: center;
     text-decoration: none;
     color: white;
+    position: relative;
  }
 
  .ph, .inst, .email{
-    padding-left: 10px;
+    padding-left: 40px;
     color: #FFF;
     text-align: center;
     font-family: Roboto;
     font-size: 20px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400; 
+    position: relative;
     line-height: 135%; /* 27px */
  }
+
+ .ph::after{
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    /* width: 144px; */
+    width: 0;
+    height: 1px;
+    top: 30px;
+    left: 40px;
+    background-repeat: no-repeat;
+ }
+
+ .ph:hover::after {
+    width: 144px; 
+  }
+
+  .inst:after{
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    /* width: 144px; */
+    width: 0;
+    height: 1px;
+    top: 30px;
+    left: 40px;
+    background-repeat: no-repeat;
+ }
+
+ .inst:hover::after {
+    width: 84px; 
+  }
+
+
+  .email::after{
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    /* width: 144px; */
+    width: 0;
+    height: 1px;
+    top: 30px;
+    left: 40px;
+    background-repeat: no-repeat;
+ }
+
+ .email:hover::after {
+    width: 196px; 
+  }
+
+ .ph::before {
+    content: "";
+    background-image: url(/img2/phone.png);
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 1px;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+.inst::before {
+    content: "";
+    background-image: url(/img2/instagram.png);
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 1px;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+.email::before {
+    content: "";
+    background-image: url(/img2/email.png);
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: -2px;
+    left: 0;
+    background-repeat: no-repeat;
+}
 
  .footer__messengers{
     display: flex;
