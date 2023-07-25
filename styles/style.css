@@ -142,7 +142,13 @@ p{
 }
 
 @media(max-width: 480px){
-    .header__nav{
+    .header__nav, .header-en{
+        display: none;
+    }
+}
+
+@media(min-width: 481px){
+    .burger{
         display: none;
     }
 }
