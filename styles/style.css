@@ -107,6 +107,7 @@ p{
         /* justify-content: space-between; */
         align-items: center;
         margin: 0 auto;
+        padding-top: 20px;
     }
 }
 
@@ -147,7 +148,79 @@ p{
     }
 }
 
-@media(min-width: 481px){
+/* .burger{
+background-image: url(/img2/burger.svg);
+background-repeat: no-repeat;
+text-align: center;
+justify-content: center;
+height: 16px;
+width: 24px;
+} */
+
+.burger{
+    position: relative;
+    }
+
+    .span-burger{
+        position: relative;
+        display: flex;
+        background-color: #1B1D1F;
+        background-repeat: no-repeat;
+        /* text-align: center;
+        justify-content: center; */
+        height: 2px;
+        width: 24px;
+        
+    }
+
+    .span-burger::before{
+        content: "";
+        background-color: #1B1D1F;
+        background-repeat: no-repeat;
+        /* text-align: center;
+        justify-content: center; */
+        height: 2px;
+        width: 24px;
+        top: 7px;
+        left: 0px;
+        position: absolute;
+        }
+
+    .span-burger::after{
+            content: "";
+            background-color: #1B1D1F;
+            background-repeat: no-repeat;
+            /* text-align: center;
+            justify-content: center; */
+            height: 2px;
+            width: 24px;
+            top: -7px;
+            left: 0px;
+            position: absolute;
+        }
+
+        .span-burger:hover::after{
+            background-color: #0591CC;
+            transform: rotate(45deg);
+            top: 0;
+            left: 0;
+        } 
+
+        .span-burger:hover::before{
+            background-color: #0591CC;
+            transform: rotate(-45deg);
+            top: 0;
+            left: 0;
+        } 
+
+
+        
+        .span-burger:hover{
+            height: 0px;
+            width: 24px;
+        } 
+
+@media(min-width: 768px){
     .burger{
         display: none;
     }
@@ -157,6 +230,10 @@ p{
    text-align: center;
    text-decoration: none;
    display: inline-block;
+}
+
+.header__nav:hover{
+    color:#46B1DE; 
 }
 
 .nav:hover{
@@ -177,9 +254,18 @@ p{
     padding: 0 0 0 0;
 }
 
+.a:hover{
+    color:#46B1DE; 
+}
+
 .nav__link:hover{
     color:#46B1DE;
 }
+
+.a:not():hover{
+    color: #0000ff;
+  }
+  
 
 .header__logo{
     display: flex;
@@ -346,6 +432,33 @@ p{
     width: 530px;
 }
 
+
+.main__text{
+    transition-property:all;
+    animation-name: main-text;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 0.05s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes main-text {
+    0% {
+      bottom: -40px;
+      opacity: 0;
+    }
+    100%{
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+
+
+
 @media(max-width: 480px){
     .main__text{
         width: 380px;
@@ -436,6 +549,32 @@ p{
 }
 
 
+.main__btn{
+    transition-property:all;
+    animation-name: main-btn;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes main-btn {
+    0% {
+      bottom: -30px;
+      opacity: 0;
+    }
+    100%{
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+
+
+
 @media(max-width: 480px){
     .main__btn{
         text-decoration: none;
@@ -508,6 +647,37 @@ p{
   flex-shrink: 0;
   align-items: center; /* Выравнивание по вертикали */
 }
+
+
+  
+.main__block{
+    transition-property:all;
+    animation-name: main-block;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease;
+  }
+  
+  @keyframes main-block {
+    0% {
+      left: -200px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;  
+    }
+    100%{
+      left: 0;
+      opacity: 1;
+    }
+  }
+  
+
+
+
 
 @media (max-width: 992px) {
     .main__block{
@@ -640,12 +810,13 @@ p{
 .main__bg{
     position: absolute;
     top: 53px;
-    right: 110px;
+    right: 200px;
     background-repeat: no-repeat;
-    width: 572px;
-    height: 463px;
+    width: 350px;
+    height: 300px;
     flex-shrink: 0;
 }
+
 
 @media (max-width: 992px) {
     .main__bg{
@@ -672,15 +843,40 @@ p{
     }
 }
 
+.lady{
+    position: absolute;
+    top: 130px;
+    right: 70px;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 500px;
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 992px) {
+    .lady{
+        position: absolute;
+        top: 233px;
+        right: 5px;
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 400px;
+        flex-shrink: 0;
+        /* z-index: 0; */
+    }
+}
+
 @media (max-width: 480px) {
     .lady{
         position: absolute;
-        top: 323px;
+        top: 270px;
         right: 5px;
         background-repeat: no-repeat;
-        height: 250px;
+        height: 300px;
+        width: 300px;
         flex-shrink: 0;
-        z-index: 0;
+        /* z-index: 0; */
     }
 }
 
@@ -1014,6 +1210,136 @@ p{
     position: relative;
 }
 
+
+.plus1{
+    transition-property:all;
+    animation-name: plus-icon1;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes plus-icon1 {
+    0% {
+        transform: translate(73px, 0px);
+    }
+    100%{
+        transform: translate(-54px, -84px);
+    }
+  }
+
+  .plus2{
+    transition-property:all;
+    animation-name: plus-icon2;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes plus-icon2 {
+    0% {
+        transform: translate(46px, 0px);
+    }
+    100%{
+        transform: translate(170px, -82px);
+    }
+  }
+
+  .plus3{
+    transition-property:all;
+    animation-name: plus-icon3;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes plus-icon3 {
+    0% {
+        transform: translate(17px, 0px);
+    }
+    100%{
+        transform: translate(165px, 0px);
+    }
+  }
+
+  .plus4{
+    transition-property:all;
+    animation-name: plus-icon4;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes plus-icon4 {
+    0% {
+        transform: translate(-10px, 0px);
+    }
+    100%{
+        transform: translate(-165px, 0px);
+    }
+  }
+  
+
+
+  .plus5{
+    transition-property:all;
+    animation-name: plus-icon5;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes plus-icon5 {
+    0% {
+        transform: translate(-38px, 0px);
+    }
+    100%{
+        transform: translate(87px, 82px);
+    }
+  }
+
+  .plus6{
+    transition-property:all;
+    animation-name: plus-icon6;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes plus-icon6 {
+    0% {
+        transform: translate(-66px, 0px);
+    }
+    100%{
+        transform: translate(-197px, 82px);
+    }
+  }
+
+
 .plus{
     position: absolute;
 }
@@ -1120,6 +1446,30 @@ p{
      text-align: right;
 }
 
+
+.service1{
+    transition-property:all;
+    animation-name: service-1;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes service-1 {
+    0% {
+        transform: translate(-102px, -310px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(121px, -310px);
+        opacity: 1;
+    }
+  }
+
 @media(max-width: 992px){
     .service1{
         transform: translate(19px, -310px);
@@ -1150,6 +1500,32 @@ p{
     gap: 5px;
     text-align: left;
 }
+
+
+.service2{
+    transition-property:all;
+    animation-name: service-2;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes service-2 {
+    0% {
+        transform: translate(478px, -310px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(431px, -310px);
+        opacity: 1;
+    }
+  }
+
+
 
 @media(max-width: 992px){
     .service2{
@@ -1182,6 +1558,30 @@ p{
     text-align: right;
 }
 
+.service3{
+    transition-property:all;
+    animation-name: service-3;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes service-3 {
+    0% {
+        transform: translate(-669px, -168px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-532px, -174px);
+        opacity: 1;
+    }
+  }
+
+
 @media(max-width: 992px){
     .service3{
         transform: translate(-507px, -168px);
@@ -1212,6 +1612,30 @@ p{
     gap: 5px;
     text-align: left;
 }
+
+.service4{
+    transition-property:all;
+    animation-name: service-4;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes service-4 {
+    0% {
+        transform: translate(788px, -275px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(773px, -284px);
+        opacity: 1;
+    }
+  }
+
 
 @media(max-width: 992px){
     .service4{
@@ -1249,6 +1673,29 @@ p{
     width: 318px;
 }
 
+.service5{
+    transition-property:all;
+    animation-name: service-5;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes service-5 {
+    0% {
+        transform: translate(-382px, -136px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-191px, -147px);
+        opacity: 1;
+    }
+  }
+
 @media(max-width: 992px){
     .service5{
         transform: translate(-202px, -136px);
@@ -1284,6 +1731,30 @@ p{
     gap: 5px;
     text-align: left;
 }
+
+.service6{
+    transition-property:all;
+    animation-name: service-6;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in;
+    position: relative;
+  }
+  
+  @keyframes service-6 {
+    0% {
+        transform: translate(191px, -138px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(115px, -151px);
+        opacity: 1;
+    }
+  }
+
 
 @media(max-width: 992px){
     .service6{
@@ -1625,7 +2096,7 @@ p{
     font-style: normal;
     font-weight: 600;
     box-shadow:none
-    line-height: 140%; /* 26.6px */
+    /* line-height: 140%; */
   }
 
 
@@ -1687,6 +2158,16 @@ p{
 .input-bg:focus{
     border: 2px solid #46B1DE;
 }
+
+.name-input:focus{
+    border: 2px solid #46B1DE;
+}
+
+.phone-input:focus{
+    border: 2px solid #46B1DE;
+}
+
+
 
   .name-input input {
     padding-left: 20px;
